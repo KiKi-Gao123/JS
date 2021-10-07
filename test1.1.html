@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞机订票计算系统</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //获取当前时间
+        var month = prompt("请选择你要出行的月份:")
+            //设置票价
+        var ticketPrice = 3200;
+
+        //选择舱位
+        var position = prompt("请选择要乘坐的舱位(头等舱选1,经济舱选0):");
+
+
+        if (month >= 5 && month <= 10) {
+            if (position == 1) {
+
+                document.write("您的机票原价是:" + ticketPrice + "<br/>");
+                document.write("出行的月份是: " + month + "<br/>");
+                document.write("舱位是:头等舱" + "<br/>");
+                document.write("折扣是:9折" + "<br/>");
+                document.write("最终价格是:" + (ticketPrice * 0.9) +
+                    "<br/>");
+            } else if (position == 0) {
+
+                document.write("您的机票原价是:" + ticketPrice + "<br/>");
+                document.write("出行的月份是: " + month + "<br/>");
+                document.write("舱位是:经济舱" + "<br/>");
+                document.write("折扣是:7.5折" + "<br/>");
+                document.write("最终价格是:" + (ticketPrice * 0.75) +
+                    "<br/>");
+            } else {
+                document.write("您的输入有误!请重新输入!")
+            }
+        } else if (month >= 1 && month <= 4 || month >= 10 && month <= 12) {
+            if (position == 1) {
+                document.write("您的机票原价是:" + ticketPrice + "<br/>");
+                document.write("出行的月份是: " + month + "<br/>");
+                document.write("舱位是:头等舱" + "<br/>");
+                document.write("折扣是:6折" + "<br/>");
+                document.write("最终价格是:" + (ticketPrice * 0.6) +
+                    "<br/>");
+            } else if (position == 0) {
+                document.write("您的机票原价是:" + ticketPrice + "<br/>");
+                document.write("出行的月份是: " + month + "<br/>");
+                document.write("舱位是:经济舱" + "<br/>");
+                document.write("折扣是:3折" + "<br/>");
+                document.write("最终价格是:" + (ticketPrice * 0.3) +
+                    "<br/>");
+            } else {
+                document.write("您的输入有误!请重新输入!")
+            }
+        }
+    </script>
+
+</body>
+
+<html>
