@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title></title>
+		
+	<script type="text/javascript">
+		
+		//文档就绪事件（当html文档加载完成后执行）
+		window.onload = function(){
+			var p = document.getElementById("content");
+		
+			//通过事件执行匿名函数
+			p.onclick=function(){
+				var content = this.innerHTML;
+				
+				alert(content);
+			}
+		
+		}
+		
+		
+		
+	</script>	
+		
+	</head>
+	<body>
+		
+		<p id="content">hello</p>
+		
+	</body>
+	
+	
+</html>

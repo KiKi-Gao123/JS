@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title></title>
+		
+		
+		
+	</head>
+	<body>
+		
+		<p id="content">hello</p>
+		
+	</body>
+	
+	<script type="text/javascript">
+			
+		var p = document.getElementById("content");
+		
+		//通过事件执行匿名函数
+		p.onclick=function(){
+			var content = this.innerHTML;
+			
+			alert(content);
+		}
+		
+	</script>
+</html>

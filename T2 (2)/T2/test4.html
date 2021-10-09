@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			//有参数有返回值的函数
+			function aa(age){
+			
+				if(age<0){
+					alert("年龄不和法");
+					return ;//终止函数
+				}
+			
+				if(age<18){
+					return "未成年";
+				}
+				else if(age<35){
+					return "成年人";
+				}
+				else if(age<60){
+					return "中年人";
+				}else{
+					return "老年人";
+				}
+				
+			}
+			
+			//访问函数
+			var str = aa(-3);
+			alert(str);
+			
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>

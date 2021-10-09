@@ -37,23 +37,36 @@
 
         // 键盘事件
         window.onload = function() {
-            document.onkeydown = function(ev) {
-                var event = ev || event;
-                // enter键盘事件
-                if (event.keyCode == 13) {
-                    jsq();
-                }
-                // esc键盘事件
-                if (event.keyCode == 27) {
-                    var message = window.confirm("是否要关闭窗口!")
-                    if (message == true) {
-                        window.opener = null;
+                document.onkeyup = function() {
+                    // alert(event.keyCode)
+                    if (event.keyCode == 13) {
+                        jsq();
+                    }
+                    if (event.keyCode == 27) {
                         window.close();
+
                     }
                 }
             }
+            // 每个按键对应一个编码
+            // window.onload = function() {
+            //     document.onkeydown = function(ev) {
+            //         var event = ev || event;
+            //         // enter键盘事件
+            //         if (event.keyCode == 13) {
+            //             jsq();
+            //         }
+            //         // esc键盘事件
+            //         if (event.keyCode == 27) {
+            //             var message = window.confirm("是否要关闭窗口!")
+            //             if (message == true) {
+            //                 window.opener = null;
+            //                 window.close();
+            //             }
+            //         }
+            //     }
 
-        }
+        // }
     </script>
 
 </head>

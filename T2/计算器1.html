@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			function jsq(){
+				var sum = 0;
+			
+				//获取第一个输入框的数据
+				var number1 = document.getElementById("number1").value;
+				//获取第二个输入框的数据
+				var number2 = document.getElementById("number2").value;
+				//获取符号
+				var fh = document.getElementById("fh").value;
+				
+				//判断输入框中是否有数据
+				if(number1.trim()==""||number2.trim()==""){
+					alert("请输入数据！");
+					return;
+				}
+				
+				//判断输入的数据是否为数字
+				if(isNaN(number1)||isNaN(number2)){
+					alert("请输入数字！");
+					return;
+				}
+				
+				//转换类型
+				var num1 = parseInt(number1);
+				var num2 = parseInt(number2);
+				
+				switch(fh){
+					case '+':sum = num1+num2;break;
+					case '-':sum = num1-num2;break;
+					case '*':sum = num1*num2;break;
+					case '/':sum = num1/num2;break;
+				}
+				
+				//将sum的值赋给第三个输入框
+				document.getElementById("number3").value = sum;
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<input type="text" name="number1" id="number1"/>
+		<select name="fh" id="fh">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="text" name="number2" id="number2"/>
+		<input type="button" value="=" onclick="jsq()"/>
+		<input type="text" name="number3" id="number3"/>
+		
+	</body>
+</html>
