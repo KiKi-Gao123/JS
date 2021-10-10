@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			function getContent(){
+				//获取id为content的p元素节点
+				var p = document.getElementById("content");
+				
+				p.innerHTML = "world";
+				
+				
+			}
+			
+			function addSty(){
+				var p = document.getElementById("content");
+				//为p元素添加样式
+				p.style.color = "red";
+				p.style.fontSize = "30px";
+				//...
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<p onclick="getContent()" id="content">hello</p>
+		<input type="button" value="添加样式" onclick="addSty()"/>
+		
+	</body>
+</html>

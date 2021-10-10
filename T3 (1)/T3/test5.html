@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+		
+			var obj;
+			
+			function openWin(){
+				obj = open("http://www.jd.com");
+			}
+			
+			function closeWin(){
+				obj.close();
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<input type="button" value="打开京东" onclick="openWin()"/>
+		<input type="button" value="关闭京东" onclick="closeWin()"/>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			window.onload = function(){
+				
+				//获取所有的p元素
+				var pArr = document.getElementsByTagName("p");
+				
+				//循环遍历当前p元素集合
+				for(var i=0;i<pArr.length;i++){
+				
+					pArr[i].onclick=function(){
+						var content = this.innerHTML;
+						alert(content);
+					}
+					
+				}
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<p>hello</p>
+		
+		<p>world</p>
+		
+		<p>韩梅梅</p>
+		
+		<p>马冬梅</p>
+		
+	</body>
+</html>

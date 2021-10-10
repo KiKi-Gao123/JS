@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			function getParent(){
+				//获取目标节点
+				var div = document.getElementById("content");
+				
+				//获取目标节点父节点
+				var parent = div.parentNode;
+				
+				parent.style.backgroundColor = "pink";
+			}
+			
+			function getChilds(){
+				//获取目标节点
+				var div = document.getElementById("content");
+				
+				//获取目标节点子节点
+				var childs = div.childNodes;
+				
+				console.log(childs.length);
+				
+				for(var i=0;i<childs.length;i++){
+					//判断当前节点是否为元素节点
+					if(childs[i].nodeType == 1){
+						childs[i].style.color = "red";
+					}
+				}
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<div id="content">
+			<p>hello</p>
+			<p>world</p>
+		</div>
+		
+		<input type="button" value="目标节点父元素" onclick="getParent()"/>
+		<input type="button" value="目标节点子元素" onclick="getChilds()"/>
+		
+	</body>
+</html>

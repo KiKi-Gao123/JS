@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			function checkAll(obj){
+				//获取全选/全不选checkbox的选中状态
+				var checked = obj.checked;
+				console.log(checked);
+				
+				//获取其它的checkbox元素对象
+				var games = document.getElementsByName("game");
+				for(var i=0;i<games.length;i++){
+					games[i].checked = checked;//每个checkbox和全选/全不选的checkbox状态保持一致
+				}
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<input type="checkbox" name="checkAll" onclick="checkAll(this)"/>全选/全不选<br/>
+		<input type="checkbox" name="game" value="lol"/>LOL<br/>
+		<input type="checkbox" name="game" value="cf"/>CF<br/>
+		<input type="checkbox" name="game" value="dnf"/>DNF<br/>
+		
+	</body>
+</html>

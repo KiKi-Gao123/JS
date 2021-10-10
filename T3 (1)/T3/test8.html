@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			var i = 1;
+			var obj;
+			
+			function play(){
+				i++;
+				if(i==5){
+					i = 1;
+				}
+				document.getElementById("pic").src = "img/girl_"+i+".gif";
+			}
+			
+			function start(){
+				obj = setInterval("play()",100);
+			}
+			
+			function stop(){
+				clearInterval(obj);
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<img src="img/girl_1.gif" id="pic"/>
+		<input type="button" value="开始" onclick="start()"/>
+		<input type="button" value="停止" onclick="stop()"/>
+		
+	</body>
+</html>

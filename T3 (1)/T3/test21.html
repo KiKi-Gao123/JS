@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			function addSong(obj){
+				//获取输入框中的数据   葫芦娃
+				var song = obj.value;
+				//动态创建li元素对象   <li></li>
+				var li = document.createElement("li");
+				//将获取的数据放到新建的li元素节点中   <li>葫芦娃</li>
+				li.innerHTML = song;
+				
+				//将新建的li追加到ul中
+				var ul = document.getElementsByTagName("ul")[0];
+				ul.appendChild(li);
+				
+			}
+			
+			
+			function removeSong(){
+				//删掉ul中的li元素
+				var ul = document.getElementsByTagName("ul")[0];
+				
+				while(true){
+					//获取子节点
+					var child = ul.lastChild;
+					if(child.nodeType!=1){
+						ul.removeChild(child);
+					}else{
+						//当删除元素节点时停止
+						ul.removeChild(child);
+						break;
+					}
+				}
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<h3>歌曲：</h3>
+		<ul>
+			<li>夜曲</li>
+			<li>晴天</li>
+			<li>将军</li>
+		</ul>
+		新歌:<input type="text" name="song" onblur="addSong(this)"/>
+		<input type="button" value="删除歌曲" onclick="removeSong()"/>
+	</body>
+</html>

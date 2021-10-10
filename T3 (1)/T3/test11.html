@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title></title>
+		
+		<script type="text/javascript">
+			
+			function getContent(){
+				//获取id为content的p元素节点
+				var p = document.getElementById("content");
+				
+				//获取p元的节点的标签体内容
+				var content = p.innerHTML;//innerHTML:标签体
+				alert(content);
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<p onclick="getContent()" id="content">hello</p>
+		
+	</body>
+</html>
