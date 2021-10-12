@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script>
+		function Telbutton() {
+			document.getElementById("change").innerHTML = "手机号:"
+		}
+
+		function Embutton(){
+			document.getElementById("change").innerHTML = "邮箱:"
+		}
+
+	</script>
+</head>
+
+<body>
+	<h3 style="text-align: center;">------登录MEITAO.COM------</h3>
+	<form action=""></form>
+	<table border="0px" align="center">
+		<th>
+		<input type="button" value="邮箱用户" onclick="Embutton()"><input type="button" value="手机用户" onclick="Telbutton()">
+		</th>
+		<tr>
+			<td id="change" align="right">邮箱:</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td align="right">密码:</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td align="right"><input type="button" value="登录"></td>
+			<td>忘记密码了?</td>
+		</tr>
+	</table>
+
+	</form>
+</body>
+
+</html>
