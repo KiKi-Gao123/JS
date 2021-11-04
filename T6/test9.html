@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+		<script type="text/javascript">
+			//敏感词
+			var mgc = /杀人|放火|赌博/;
+			
+			//回复函数
+			function setContent(){
+				//获取输入框中的文本内容
+				var value = document.getElementById("content").value;
+				
+				//替换字符串中的敏感词
+				value = value.replace(mgc,"**");
+				
+				//创建p标签 <p></p>
+				var p = document.createElement("p");
+				//将获取到文本内容存放到p中  <p>在干啥？</p>
+				p.innerHTML = value;
+				//将新建的p元素追加到div元素中
+				var div = document.getElementById("main");
+				div.appendChild(p);
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="content"/>
+		<input type="button" value="回复" onclick="setContent()"/>
+		<hr>
+		<div id="main">
+			
+		</div>
+	</body>
+</html>

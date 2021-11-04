@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+		<script type="text/javascript">
+			
+			//字符串对象
+			var str = "This is a dog, that is a cat";
+			
+			//创建正则表达式对象
+			//th**
+			//i:不区分大小写
+			//g:全局匹配
+			var reg = /th[a-z]{2}/ig;
+			
+			//获取字符串中所有匹配到的元素
+			var arr = str.match(reg);
+			
+			for(var i=0;i<arr.length;i++){
+				alert(arr[i]);
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

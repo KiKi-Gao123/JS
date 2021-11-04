@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+		<script type="text/javascript">
+			
+			//字符串对象
+			var str = "This is a dog, that is a cat";
+			
+			//获取dog字符串在str中的索引位置
+			//indexOf:必须匹配已知确定的字符串
+			//var index = str.indexOf("dog");
+			
+			var regExp = /do[a-z]{1}/;
+			//var index = str.indexOf(regExp);
+			//类似模糊匹配
+			var index = str.search(regExp);
+			
+			alert(index);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
